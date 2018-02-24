@@ -20,5 +20,14 @@ CREATE TABLE cwsl
 	name varchar(50),
 	email varchar(50),
 	course_id varchar(6),
-	PRIMARY KEY(serial_number)
+	PRIMARY KEY(serial_number),
+	UNIQUE(roll_number,course_id)
 );
+
+
+CREATE PROCEDURE count_credits()
+
+
+(select a.roll_number, a.name, a.email, a.course_id, b.number_of_credits 
+from cwsl as a, cc as b
+where a.course_id=b.course_id) as table_1
