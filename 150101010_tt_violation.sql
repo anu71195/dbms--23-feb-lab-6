@@ -66,11 +66,11 @@ order by a.roll_number
 case #case statement to sort entries so that (a,b)  will be equal to (b,a)
 when course_1<course_2 then course_1
 else course_2
-end,
+end as course_1,
 case
 when course_1>course_2 then course_1
 else course_2
-end 
+end as course_2
 from VIOLATION;
 end $ #ending the procedure
 delimiter ; #changing the delimiter back to its original value
