@@ -24,6 +24,27 @@ CREATE TABLE cwsl
 	UNIQUE(roll_number,course_id)
 );
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 delimiter $
 CREATE PROCEDURE count_credits( )
 BEGIN
@@ -38,6 +59,8 @@ having total_credits>40;
 end
 $
 delimiter ;
+
+
 
 drop PROCEDURE tt_violation;
 delimiter $
