@@ -23,7 +23,6 @@ CREATE TABLE cwsl
 	PRIMARY KEY(serial_number),
 	UNIQUE(roll_number,course_id)
 );
-source queries.sql;
 
 
 
